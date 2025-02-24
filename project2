@@ -1,0 +1,5 @@
+import pandas as pd
+
+url =  "https://webpages.charlotte.edu/mschuck1/classes/DTSC2301/Data/DTSC2301_Project2.csv"
+
+df = pd.read_csv(url)
