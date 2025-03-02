@@ -10,8 +10,7 @@ print(ames.head())
 
 X = ames[['RelCompactness', 'WallArea', 'SurfaceArea', 'RoofArea', 'OverallHgt', 'Orientation', 'GlazingAreaDist', 'GlazingArea']]
 y = ames['HeatingLoad']
-X['interaction'] = X['WallArea'] * X['RoofArea']
-X['interaction_2'] = X['RelCompactness'] * X['SurfaceArea']
+X['RelComp_SurfArea'] = X['RelCompactness'] * X['SurfaceArea']
 
 print("X head with interaction terms:")
 print(X.head())
