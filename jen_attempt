@@ -13,6 +13,8 @@ X = ames[['RelCompactness', 'WallArea', 'SurfaceArea', 'RoofArea', 'OverallHgt',
 y = ames['HeatingLoad']
 
 X['interaction'] = X['WallArea'] * X['RoofArea']
+X['interaction_2'] = X['RelCompactness'] * X['SurfaceArea']
+
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
